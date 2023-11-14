@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Exclusão</title>
+</head>
+<body>
+    <h1>Tem certeza que deseja excluir o voo "{{ voo.nome_do_voo }}"?</h1>
+    <form method="post" action="{% url 'excluir_voo' pk=voo.pk %}">
+        {% csrf_token %}
+        <button type="submit">Confirmar Exclusão</button>
+    </form>
+    <a href="{% url 'detalhes_voo' pk=voo.pk %}">Cancelar</a>
+</body>
+</html>

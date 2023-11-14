@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Voo</title>
+</head>
+<body>
+    <h1>{{ voo.nome_do_voo }}</h1>
+    <p>Data: {{ voo.data_voo }}</p>
+    <p>Hora: {{ voo.hora_voo }}</p>
+    <a href="{% url 'editar_voo' pk=voo.pk %}">Editar Voo</a>
+    <a href="{% url 'excluir_voo' pk=voo.pk %}">Excluir Voo</a>
+    <a href="{% url 'lista_voos' %}">Voltar para a Lista de Voos</a>
+</body>
+</html>

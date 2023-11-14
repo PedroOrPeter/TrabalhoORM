@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Voos</title>
+</head>
+<body>
+    <h1>Lista de Voos</h1>
+    <ul>
+        {% for voo in voos %}
+            <li><a href="{% url 'detalhes_voo' pk=voo.pk %}">{{ voo.nome_do_voo }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'novo_voo' %}">Adicionar Novo Voo</a>
+</body>
+</html>
